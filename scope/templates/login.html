@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Login</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="stylesheet" href="{% static 'css/firstlogin.css' %}">
+</head>
+<body>
+    <div class="login-card">
+        <h2>LOGIN</h2>
+
+        <form method="post">
+            {% csrf_token%}
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+
+            <div class="extras">
+                <label>
+                    <input type="checkbox" name="remember"> Keep Me Logged In
+                </label>
+
+                <a href="{% url 'forgot' %}">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-login">
+                Login
+            </button>
+
+            <p class="register-text">Don't have an account? <a href="{% url 'firstlogin' %}">Register</a></p>
+        </form>
+    </div>
+    {% if error %}
+    <div class="alert-overlay" id="alertBox">
+        <div class="custom-alert-box">
+            <span class="alert-close" onclick="closeAlert()">×</span>
+            <p>{{ error }}</p>
+
+            <button class="alert-ok" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+    {% endif %}
+    <script>
+        function closeAlert() {
+            document.getElementById("alertBox").style.display = "none";
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="login-wrapper">
+        <div class="left-panel">
+            <div class="overlay">
+                <h1>Welcome Back</h1>
+                <p>Login to access your dashboard and manage your account securely.</p>
+            </div>
+        </div>
+        <div class="right-panel glass">
+            <h2>User Login</h2>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="input-box">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-box">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="login-btn">LOGIN</button>
+                <div class="extras">
+                    <label class="remember-label">
+                        <input type="checkbox" name="remember"> Keep Me Logged In
+                    </label>
+
+                    <a href="{% url 'forgot' %}" class="forgot-link">Forgot Password?</a>
+                </div>
+
+
+                <p class="register-text">
+                    Don’t have an account?
+                    <a href="{% url 'firstlogin' %}">First Time Login</a>
+                </p>
+            </form>
+
+        </div>
+        <!-- {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %} -->
+        {% if error %}
+        <div class="alert-overlay" id="alertBox">
+            <div class="custom-alert-box">
+                <span class="alert-close" onclick="closeAlert()">×</span>
+                <p>{{ error }}</p>
+
+                <button class="alert-ok" onclick="closeAlert()">OK</button>
+            </div>
+        </div>
+        {% endif %}
+        <script>
+            function closeAlert() {
+                document.getElementById("alertBox").style.display = "none";
+            }
+        </script>
+
+    </div>
+
+</body>
+
+</html>

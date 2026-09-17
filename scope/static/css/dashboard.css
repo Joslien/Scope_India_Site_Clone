@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f3f5fa;
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #0f1525;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.3);
+}
+
+.profile-area {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    color: #e1e1e1;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transform: scale(1.03);
+}
+
+.logout-btn {
+    color: #ff5757 !important;
+}
+
+/* MAIN */
+.main {
+    margin-left: 280px;
+    padding: 30px;
+    width: calc(100% - 280px);
+}
+
+.welcome {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.big-profile {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.details-card .row {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-size: 16px;
+}
+
+button{
+    margin-top: 40px;
+}

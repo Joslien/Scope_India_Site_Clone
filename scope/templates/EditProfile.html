@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+
+    <link rel="stylesheet" href="{% static 'css/editprofile.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="edit-container">
+
+        <h1>Edit Your Profile</h1>
+        <p class="subtitle">Update your personal information below</p>
+
+        <form method="post" enctype="multipart/form-data" class="form-card">
+            {% csrf_token %}
+
+            <div class="grid-2">
+
+                <div class="form-group">
+                    <label><i class="fa fa-user"></i> Full Name</label>
+                    <input type="text" name="fullname" value="{{ details.fullname }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-calendar"></i> Date of Birth</label>
+                    <input type="text" name="dob" value="{{ details.dob|date:'Y-m-d' }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-venus-mars"></i> Gender</label><br>
+                    <input type="text" name="gender" value="{{ details.gender }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-graduation-cap"></i> Qualification</label>
+                    <input type="text" name="qual" value="{{ details.qualification }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-phone"></i> Phone Number</label>
+                    <input type="text" name="number" value="{{ details.number }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-user-friends"></i> Guardian Name</label>
+                    <input type="text" name="guardian" value="{{ details.guardian }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-briefcase"></i> Guardian Occupation</label>
+                    <input type="text" name="occupation" value="{{ details.occupation }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-mobile-alt"></i> Guardian Mobile</label>
+                    <input type="text" name="guard_mobile" value="{{ details.mobile }}">
+
+                </div>
+
+                <!-- <div class="form-group">
+                    <label><i class="fa fa-book"></i> Course</label>
+                    <input type="text" name="course" value="{{ details.course }}">
+
+                </div> -->
+                <select id="course" name="course">
+                    <option value="">-- Select --</option>
+
+                    {% for c in  %}
+                    <option value="{{ c.id }}">{{ c.course_name }}</option>
+                    {% endfor %}
+                </select>
+
+                <div class="form-group">
+                    <label><i class="fa fa-laptop"></i> Training Mode</label><br>
+                    <input type="text" name="mode" value="{{ details.mode }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-map-marker-alt"></i> Preferred Location</label><br>
+                    <input type="text" name="loc" value="{{ details.loc }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-clock"></i> Training Time</label>
+                    <input type="text" name="time" value="{{ details.time|cut:'['|cut:']'|cut:"'" }}">
+                
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa fa-heart"></i> Hobbies</label>
+                <input type="text" name="hobby" value="{{ details.hobbies|cut:' ['|cut:']'|cut:"'" }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-home"></i> Address</label>
+                    <input type="text" name="address" value="{{ details.address }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-flag"></i> Country</label>
+                    <input type="text" name="country" value="{{ details.country }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-map"></i> State</label>
+                    <input type="text" name="state" value="{{ details.state }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-city"></i> City</label>
+                    <input type="text" name="city" value="{{ details.city }}">
+
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-location-pin"></i> PIN / Zip Code</label>
+                    <input type="text" name="pin" value="{{ details.pin }}">
+
+                </div>
+
+                <div class="form-group full">
+                    <label><i class="fa fa-image"></i> Upload Profile Photo</label>
+                    <input type="file" name="image">
+                    {% if details.file %}
+                    <p>Current Image:</p>
+                    <img src="{{ details.file.url }}" width="120" style="border-radius:10px;">
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="submit-btn">Save Changes</button>
+            <a href="{% url 'dashboard' %}" class="cancel-btn">Cancel</a>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

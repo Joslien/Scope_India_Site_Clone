@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Viga&family=Poppins&family=Roboto&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <div class="nav">
+            <img src="{% static 'images/scopeindia-logo[1].webp' %}" class="logo">
+            <img src="{% static 'images/google-rating-scope-india[1].webp' %}" class="rating">
+            <div class="app">
+                <a href="#"><img src="{%static 'images/gallery-scope-india.webp' %}"></a>
+                <a href="#"><img src="{%static 'images/instagram-scope-india.png' %}"></a>
+                <a href="#"><img src="{%static 'images/callnow-scope-india.webp' %}"></a>
+                <a href="#"><img src="{%static 'images/whatsapp-scope-india.webp' %}"></a>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="{% url 'home'%}" class="navigation">HERO</a></li>
+                    <li><a href="{% url 'course'%}" class="current"
+                            style="color: #eeaf10;padding: 5px 10px;">COURSES</a></li>
+                    <li><a href="{% url 'registration' %}" class="reg">REGISTRATION</a></li>
+                    <li><a href="{% url 'login' %}" class="navigation">LOGIN</a></li>
+                    <li><a href="{% url 'about'%}" class="navigation">ABOUT US</a></li>
+                    <!-- <li><a href="#" class="navigation">FAQ</a></li> -->
+                    <!-- <li><a href="#" class="navigation">REVIEWS</a></li> -->
+                    <li><a href="{% url 'contact' %}" class="navigation">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="carrer">
+            <h1>Courses at SCOPE INDIA</h1>
+            <div class="center">
+                <h2>Center for Software, Networking, & Cloud Education</h2>
+                <h3>One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing
+                    courses
+                    with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and
+                    we have
+                    assisted more than 15,000 students so far.
+                </h3>
+            </div>
+        </div>
+        <div class="glob">
+            <h4>Get Globally Certified from SCOPE INDIA</h4>
+            <div class="image">
+                <img src="{%static 'images\microsoft.png' %}" alt="microsoft">
+                <img src="{%static 'images\ibm.png' %}" alt="ibm">
+                <img src="{%static 'images\google.png' %}" alt="google">
+                <img src="{%static 'images\amazon.png' %}">
+                <img src="{%static 'images\redhat.png' %}">
+                <img src="{%static 'images\istqb.png' %}" class="istqb">
+                <img src="{%static 'images\cisco.png' %}" class="cisco">
+                <img src="{%static 'images\github.png' %}">
+            </div>
+        </div>
+        <div class="course1">
+            <div class="ai_course">
+                <h2>Data Science, AI, & Data Analytics Courses</h2>
+            </div>
+            <div class="data_course">
+                {% for items in data1 %}
+                <a href="#" style="color: #092bcd;">
+                    <h2>{{items.sub_courses}}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="course2">
+            <div class="ai_course">
+                <h2>Software Courses</h2>
+            </div>
+            <div class="software_course">
+                {% for items in data2 %}
+                <a href="#" style="color: #092bcd;">
+                    <h2>{{items.sub_courses}}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="course3">
+            <div class="ai_course">
+                <h2>Networking, Server, Cloud, & DevOps Courses</h2>
+            </div>
+            <div class="Cloud_course">
+                {% for items in data3 %}
+                <a href="#" style="color: #092bcd;">
+                    <h2>{{items.sub_courses}}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="course1">
+            <div class="ai_course">
+                <h2>Software Testing Courses</h2>
+            </div>
+            <div class="data_course">
+                {% for items in data4 %}
+                <a href="#" style="color: #092bcd;">
+                    <h2>{{items.sub_courses}}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="course1">
+            <div class="ai_course">
+                <h2>Other Courses</h2>
+            </div>
+            <div class="data_course">
+                {% for items in data5 %}
+                <a href="#" style="color: #092bcd;">
+                    <h2>{{items.sub_courses}}</h2>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer">
+            <p class="foot1">We are located at Technopark TVM | Thampanoor TVM | Kochi, Kerala | Nagercoil, Tamil Nadu
+            </p>
+            <p class="foot2">
+                <a href="tel:+9745936073">9745936073&nbsp(TPK)</a>
+                <a href="tel:+">9745936073&nbsp(TVM)</a>
+                <a href="tel:+">7592939481&nbsp(EKM)</a>
+                <a href="tel:+">8075536185&nbsp(NGL)</a>
+                <a href="mailto:info@scopeindia.org">info@scopeindia.org</a>
+            </p>
+            <p class="foot3">
+                All Rights Reserved
+                <a href="https://www.suffixesolutions.com/">SCOPE INDIA & SUFFIX SOLUTIONS PRIVATE LIMITED</a>
+                ©&nbsp;2007-2025 &nbsp;
+                <span>|</span>
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">Blog</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

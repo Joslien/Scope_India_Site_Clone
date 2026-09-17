@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/index.css'%}">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div>
+    <div class="nav">
+      <img src="{% static 'images/scopeindia-logo[1].webp' %}" class="logo">
+      <img src="{% static 'images/google-rating-scope-india[1].webp' %}" class="rating">
+      <div class="app">
+        <a href="#"><img src="{%static 'images/gallery-scope-india.webp' %}"></a>
+        <a href="#"><img src="{%static 'images/instagram-scope-india.png' %}"></a>
+        <a href="#"><img src="{%static 'images/callnow-scope-india.webp' %}"></a>
+        <a href="#"><img src="{%static 'images/whatsapp-scope-india.webp' %}"></a>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li><a href="{% url 'home'%}" class="current" style="color: #eeaf10;padding: 5px 10px;">HERO</a></li>
+          <li><a href="{% url 'course'%}" class="navigation" s>COURSES</a></li>
+          <li><a href="{% url 'registration' %}" class="reg">REGISTRATION</a></li>
+          <li><a href="{% url 'login' %}" class="navigation">LOGIN</a></li>
+          <li><a href="{% url 'about'%}" class="navigation">ABOUT US</a></li>
+          <!-- <li><a href="#" class="navigation">FAQ</a></li> -->
+          <!-- <li><a href="#" class="navigation">REVIEWS</a></li> -->
+          <li><a href="{% url 'contact' %}" class="navigation">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="carrer">
+      <h1>Your career partner!</h1>
+      <div class="center">
+        <h2>Center for Software, Networking, & Cloud Education</h2>
+        <h3>One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing
+          courses
+          with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and
+          we have
+          assisted more than 15,000 students so far.
+        </h3>
+      </div>
+    </div>
+    <div class="glob">
+      <h4>Get Globally Certified from SCOPE INDIA</h4>
+      <div class="image">
+        <img src="{%static 'images\microsoft.png' %}" alt="microsoft">
+        <img src="{%static 'images\ibm.png' %}" alt="ibm">
+        <img src="{%static 'images\google.png' %}" alt="google">
+        <img src="{%static 'images\amazon.png' %}">
+        <img src="{%static 'images\redhat.png' %}">
+        <img src="{%static 'images\istqb.png' %}" class="istqb">
+        <img src="{%static 'images\cisco.png' %}" class="cisco">
+        <img src="{%static 'images\github.png' %}">
+      </div>
+    </div>
+
+
+    <div class="dream">
+      <div class="content">
+        <!-- LEFT CONTENT -->
+        <div class="left_content">
+          <h2>Dreaming about a career in IT</h2>
+          <p>
+            Spearheaded by the working professionals of Suffix E Solutions in flexible<br>
+            learning mode, we provide quality training with 100% placement support.
+          </p>
+          <p>We provide comprehensive courses in:</p>
+
+          <div class="hm_abt_cont_courses">
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Software Programming</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">DevOps</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Data Science & AI</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Software Testing</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Data Analytics</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Server Administration</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Cloud Computing</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Networking</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Mobile App Development</a>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                  <path
+                    d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                </svg>
+                <a href="#">Digital Marketing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right_content">
+          <div>
+            <h3>Classes</h3>
+            <p>Learn Anywhere, Anytime - Online & in-Person Classes Available!</p>
+          </div>
+          <div>
+            <h3>Placement</h3>
+            <p>Guaranteed Success - 100% Placement Support</p>
+          </div>
+          <div class="intern">
+            <h3>Training</h3>
+            <p>Training by Working Professionals of Suffix E Solutions</p>
+          </div>
+          <div class="intern">
+            <h3>Internship</h3>
+            <p>OJT (On the Job Training) under Suffix E Solutions after course completion with experience certificate
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="Highlights">
+      <div class="high_content">
+        <h2>Placement Highlights</h2>
+        <div class="box">
+          <div>
+            <span>100%</span>
+            <p>Placement Assistance</p>
+          </div>
+          <div>
+            <span>1000+</span>
+            <p>Students are Getting Placed Every Year</p>
+          </div>
+          <div>
+            <span>500+</span>
+            <p>Partner Companies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai">
+      <div class="ai_content">
+        <h2>Match the Pace of Artificial Intelligence</h2>
+        <h3>Study AI From SCOPE INDIA</h3>
+        <div class="grid_box">
+          <div class="image_content">
+            <a href="#"><img src="{% static 'images\data-science-ai-course-scopeindia.webp'%}" class="data-science"></a>
+            <a href="#"><img src="{% static 'images\robo-scope-site.png'%}" class="robot"></a>
+          </div>
+          <div class="text_content">
+            <div class="text_courses">
+              <a href="#" class="click">
+                <ul>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Python 3.12
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    SQL
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Pandas
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    NumPy
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Matplotlib and Seaborn
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Tableau
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Excel & Power Bl
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Django & REST Services
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Machine Learning
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Deep Learning & AI
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    English Language Training
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Live Projects
+                  </li>
+                </ul>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p>Harness the capabilities of machine learning, deep learning, natural language processing and uncover hidden
+          patterns, optimize processes, and drive smarter <span>decision-making.</span></p>
+      </div>
+    </div>
+
+
+    <div class="full_stack">
+      <h2>Become a Full Stack Developer</h2>
+      <div class="main_stack">
+        <div class="left_stack">
+          <h3>Your pathway includes</h3>
+          <a href="#">
+            <ul>
+              <li>
+                <span>1</span>
+                <div>
+                  <h4>Foundation</h4>
+                  <p>Programming Fundamentals, SQL</p>
+                </div>
+              </li>
+              <li>
+                <span style="margin-top: 19px;">2</span>
+                <div>
+                  <h4>Front End </h4>
+                  <p> HTML, CSS, JavaScript, jQuery, Bootstrap, React JS </p>
+              </li>
+              <li>
+                <span style="margin-top: 19px;">3</span>
+                <div>
+                  <h4>Back End</h4>
+                  <p>Python / Java / ASP.NET / PHP / JavaScript</p>
+                </div>
+              </li>
+            </ul>
+          </a>
+        </div>
+        <div class="right_stack">
+          <a href="#"><img src="{% static 'images\WhatsApp Image 2025-10-12 at 15.15.23_aa4c888f.jpg'%}"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="Soft_Testing">
+      <div class="testing">
+        <h2><span>No Coding</span>
+          Prowess?
+          <span>Not a Problem</span>
+        </h2>
+        <div class="main_testing">
+          <div class="testing_image">
+            <a href="#"><img src="{% static 'images\WhatsApp Image 2025-10-12 at 15.28.55_94beddd0.jpg'%}"></a>
+          </div>
+          <div class="right_testing">
+            <a href="#" class="click">
+              <h4>Software Testing is the Gateway to Your IT Career</h4>
+              <div class="testing_content">
+                <div class="testing_courses">
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Manual Testing
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Automation Testing
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Practical Sessions
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Theoretical Sessions
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Flexible Schedules
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      On Job Training
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <p>Start your tech journey today with
+          <span>SCOPE INDIA</span>
+          and make your mark in the IT industry!
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="dev">
+      <h2>Career with DevOps</h2>
+      <div class="main_dev">
+        <div class="left_dev">
+          <h4>Master DevOps From SCOPE INDIA</h4>
+          <div class="dev_content">
+            <div class="dev_courses">
+              <ul>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M 16.707 5.293 a 1 1 0 0 1 0 1.414 l -8 8 a 1 1 0 0 1 -1.414 0 l -4 -4 a 1 1 0 0 1 1.414 -1.414 L 8 12.586 l 7.293 -7.293 a 1 1 0 0 1 1.414 0 Z" />
+                  </svg>
+                  Build Applications
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                  </svg>
+                  Deploy Applications
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                  </svg>
+                  Automate Workflows
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                  </svg>
+                  Hands-on Experience
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                  </svg>
+                  Popular Tools
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                  </svg>
+                  Cloud Infrastructure
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                  </svg>
+                  Cloud Management
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#d9126f" viewBox="0 0 20 20">
+                    <path
+                      d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                  </svg>
+                  Deployement Strategies
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right_dev">
+          <a><img src="{% static 'images\devops-course-scope-india.webp'%}"></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="bi">
+      <div class="bi-content">
+        <h2>Match the Pace of Business Intelligence </h2>
+        <div class="main-bi">
+          <div class="left-bi">
+            <a href="#"><img src="{%static 'images\power-bi-course-scopeindia.webp'%}"></a>
+          </div>
+          <div class="right_bi">
+            <a href="#" class="click">
+              <h4>Study Power BI From SCOPE INDIA</h4>
+              <div class="power_content">
+                <div class="power_courses">
+                  <ul>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Transform Raw Data
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Interactive Dashboards
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Hands-on Training
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Real-World Scenarios
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      Flexible Schedules
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                        <path
+                          d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                      </svg>
+                      On Job Training
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mission">
+      <div class="mission-content">
+        <h2>Our Mission & Vision </h2>
+        <div class="main-mission">
+          <div class="left-mission">
+            <div class="mission-svg">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                </path>
+              </svg>
+            </div>
+            <h4>Our Mission</h4>
+            <p>
+              <span>SCOPE INDIA</span>
+              seeks to close the knowledge gap between education and employment by offering interactive,
+              industry-focused IT training led by proficient working professionals and aligned with the latest trends
+              and technologies. Our objective is to provide people with the technical expertise and confidence they need
+              to build fulfilling careers.
+            </p>
+            <div class="miss_viss_content">
+              <div class="left-miss_courses">
+                <ul>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Industry-aligned curriculum
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Practical skill development
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Career-focused training
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="right-vision">
+            <div class="vision-svg">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </div>
+            <h4>Our Vision</h4>
+            <p>
+              We aspire to become the most respected and forward-thinking training organization in India and beyond by shaping the future of IT education via innovation, integrity, and strong industry ties. We intend to expand globally.
+            </p>
+            <div class="right-vis_content">
+              <div class="right-vis_courses">
+                <ul>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Global recognition
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Innovation leadership
+                  </li>
+                  <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(234,179,8)" viewBox="0 0 20 20">
+                      <path
+                        d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" />
+                    </svg>
+                    Technology excellence
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <p class="foot1">We are located at Technopark TVM | Thampanoor TVM | Kochi, Kerala | Nagercoil, Tamil Nadu</p>
+    <p class="foot2">
+      <a href="tel:+9745936073">9745936073&nbsp(TPK)</a>
+      <a href="tel:+">9745936073&nbsp(TVM)</a>
+      <a href="tel:+">7592939481&nbsp(EKM)</a>
+      <a href="tel:+">8075536185&nbsp(NGL)</a>
+      <a href="mailto:info@scopeindia.org">info@scopeindia.org</a>
+    </p>
+    <p class="foot3">
+      All Rights Reserved
+      <a href="https://www.suffixesolutions.com/">SCOPE INDIA & SUFFIX SOLUTIONS PRIVATE LIMITED</a>
+      ©&nbsp;2007-2025 &nbsp;
+      <span>|</span>
+      <a href="#">Privacy Policy</a>
+      <span>|</span>
+      <a href="#">Blog</a>
+    </p>
+  </div>
+  </div>
+</body>
+
+</html>

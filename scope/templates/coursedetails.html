@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Courses</title>
+    <link rel="stylesheet" href="{% static 'css/course.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">Your Courses</div>
+
+    <div class="courses-container">
+
+        <!-- Enrolled Courses Section -->
+        <div class="section enrolled-section">
+            <div class="section-title">Enrolled Courses</div>
+            <div class="scroll-list">
+                {% for course in enrolled_courses %}
+                <div class="course-item">{{ course }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- All Courses Section -->
+        <div class="section all-section">
+            <div class="section-title">All Courses</div>
+            <div class="scroll-list">
+
+                <!-- data1 -->
+                {% for items in data1 %}
+                <form action="{% url 'enroll' %}" method="POST" class="course-item">
+                    {% csrf_token %}
+                    <input type="hidden" name="course" value="{{ items.sub_courses }}">
+                    <span class="course-name">{{ items.sub_courses }}</span>
+                    <span class="course-desc"><a href="{% url 'course_detail' items.id%}">Click to view details</a></span>
+                    <button type="submit" class="enroll-btn"><a href="{% url 'course_detail' items.id%}">Enroll</a></button>
+                </form>
+                {% endfor %}
+
+                <!-- data2 -->
+                {% for items in data2 %}
+                <form action="{% url 'enroll' %}" method="POST" class="course-item">
+                    {% csrf_token %}
+                    <input type="hidden" name="course" value="{{ items.sub_courses }}">
+                    <span class="course-name">{{ items.sub_courses }}</span>
+                    <span class="course-desc"><a href="{% url 'course_detail' items.id%}">Click to view details</a></span>
+                    <button type="submit" class="enroll-btn">Enroll</button>
+                </form>
+                {% endfor %}
+
+
+                {% for items in data3 %}
+                <form action="{% url 'enroll' %}" method="POST" class="course-item">
+                    {% csrf_token %}
+                    <input type="hidden" name="course" value="{{ items.sub_courses }}">
+                    <span class="course-name">{{ items.sub_courses }}</span>
+                    <span class="course-desc"><a href="{% url 'course_detail' items.id%}">Click to view details</a></span>
+                    <button type="submit" class="enroll-btn">Enroll</button>
+                </form>
+                {% endfor %}
+
+
+                {% for items in data4 %}
+                <form action="{% url 'enroll' %}" method="POST" class="course-item">
+                    {% csrf_token %}
+                    <input type="hidden" name="course" value="{{ items.sub_courses }}">
+                    <span class="course-name">{{ items.sub_courses }}</span>
+                    <span class="course-desc"><a href="{% url 'course_detail' items.id%}">Click to view details</a></span>
+                    <button type="submit" class="enroll-btn">Enroll</button>
+                </form>
+                {% endfor %}
+
+
+                {% for items in data5 %}
+                <form action="{% url 'enroll' %}" method="POST" class="course-item">
+                    {% csrf_token %}
+                    <input type="hidden" name="course" value="{{ items.sub_courses }}">
+                    <span class="course-name">{{ items.sub_courses }}</span>
+                    <span class="course-desc"><a href="{% url 'course_detail' items.id%}">Click to view details</a></span>
+                    <button type="submit" class="enroll-btn">Enroll</button>
+                </form>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+    <button type="submit" class="enroll-btn"><a href="{% url 'dashboard'%}">Back to Dashboard</a></button>
+    <!-- Messages popup -->
+    {% if messages %}
+    <div class="messages-container">
+        {% for message in messages %}
+        <div class="message {{ message.tags }}">
+            <span class="message-text">{{ message }}</span>
+            <button class="ok-btn">OK</button>
+            <button class="close-btn">&times;</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Close message when clicking OK or X
+            document.querySelectorAll('.ok-btn, .close-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.parentElement.remove(); // removes the message popup
+                });
+            });
+
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                document.querySelectorAll('.message').forEach(msg => msg.remove());
+            }, 5000);
+        });
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f2f2f6 url("https://www.transparenttextures.com/patterns/cubes.png"); /* very light pattern */
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 60px auto;
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #253169;
+            margin-bottom: 30px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px 40px;
+            margin-bottom: 30px;
+        }
+
+        .item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .item:hover {
+            transform: translateX(4px); /* slight hover */
+        }
+
+        .icon {
+            font-size: 22px;
+            color: #253169;
+            margin-top: 3px;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #253169;
+            font-size: 15px;
+        }
+
+        .value {
+            display: block;
+            font-size: 15px;
+            color: #333;
+            margin-top: 2px;
+        }
+
+        .actions {
+            margin-top: 25px;
+        }
+
+        button, a {
+            padding: 12px 24px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 500;
+            border: none;
+            transition: 0.25s ease-in-out;
+        }
+
+        .enroll-btn {
+            background: #253169;
+            color: white;
+        }
+
+        .enroll-btn:hover {
+            background: #1c2550;
+            transform: translateY(-2px);
+        }
+
+        .back-btn {
+            background: #e2e4ea;
+            color: #253169;
+            margin-left: 8px;
+        }
+
+        .back-btn:hover {
+            background: #d4d6dc;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 700px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">{{ course.sub_courses }}</h1>
+
+        <div class="two-col">
+            <div class="item">
+                <i class="fa-solid fa-list icon"></i>
+                <div>
+                    <span class="label">Category</span>
+                    <span class="value">{{ course.course_name }}</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <i class="fa-solid fa-clock icon"></i>
+                <div>
+                    <span class="label">Duration</span>
+                    <span class="value">{{ course.duration }}</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <i class="fa-solid fa-indian-rupee-sign icon"></i>
+                <div>
+                    <span class="label">Fee</span>
+                    <span class="value">₹{{ course.fee }}</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <i class="fa-solid fa-location-dot icon"></i>
+                <div>
+                    <span class="label">Location</span>
+                    <span class="value">{{ course.location }}</span>
+                </div>
+            </div>
+
+            <div class="item" style="grid-column: span 2;">
+                <i class="fa-solid fa-info-circle icon"></i>
+                <div>
+                    <span class="label">Description</span>
+                    <span class="value">{{ course.description }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            {% if not already_enrolled %}
+            <form action="{% url 'enroll' %}" method="POST" style="display:inline;">
+                {% csrf_token %}
+                <input type="hidden" name="course" value="{{ course.sub_courses }}">
+                <button type="submit" class="enroll-btn">Enroll Now</button>
+            </form>
+            {% endif %}
+            <a href="{% url 'coursedetails' %}" class="back-btn">Back</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/firstlogin.css' %}">
+</head>
+
+<body>
+    <div class="nav">
+        <img src="{% static 'images/scopeindia-logo[1].webp' %}" class="logo">
+        <img src="{% static 'images/google-rating-scope-india[1].webp' %}" class="rating">
+        <div class="app">
+            <a href="#"><img src="{%static 'images/gallery-scope-india.webp' %}"></a>
+            <a href="#"><img src="{%static 'images/instagram-scope-india.png' %}"></a>
+            <a href="#"><img src="{%static 'images/callnow-scope-india.webp' %}"></a>
+            <a href="#"><img src="{%static 'images/whatsapp-scope-india.webp' %}"></a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="{%  url 'home'%}" class="navigation ">HOME</a></li>
+                <li><a href="{% url 'course'%}" class="navigation ">COURSES</a></li>
+                <li><a href="{% url 'registration' %}" class="reg">REGISTRATION</a></li>
+                <li><a href="#" class="navigation">PLACEMENTS</a></li>
+                <li><a href="{% url 'about'%}" class="current" style="color: #eeaf10;padding: 5px 10px;">ABOUT US</a>
+                </li>
+                <li><a href="#" class="navigation">FAQ</a></li>
+                <li><a href="#" class="navigation">REVIEWS</a></li>
+                <li><a href="{%  url 'contact'%}" class="navigation">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="email">
+        <form method="post">
+            {%csrf_token%}
+            {% if show_email %}
+            <label>Enter Your Email :</label>
+            <input type="email" name="email" value="{{ email }}" required><br>
+            <button type="submit" name="action" value="verify_email">Verify Email</button>
+            {% endif %}
+
+            {%if show_pass%}
+            <label>Create Password:</label>
+            <input type="password" name="pass" required><br>
+            {% endif %}<br>
+
+            {%if confirm_pass%}
+            <label>Confirm Password:</label>
+            <input type="password" name="conpass" required><br><br>
+            <button type="submit" name="action" value="send_pass">Submit</button>
+            {% endif %}
+        </form>
+        {% if error %}
+        <div class="alert-overlay" id="alertBox">
+            <div class="custom-alert-box">
+                <span class="alert-close" onclick="closeAlert()">×</span>
+                <p>{{ error }}</p>
+                <!-- <button class="alert-ok"><a href="{% url 'registration'%}">Register</a></button> -->
+                <button class="alert-ok" onclick="closeAlert()"><a>OK</button>
+            </div>
+        </div>
+        {% endif %}
+
+        <script>
+            function closeAlert() {
+                document.getElementById("alertBox").style.display = "none";
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

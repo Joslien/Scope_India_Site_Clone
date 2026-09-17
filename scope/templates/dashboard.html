@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="profile-area">
+            <img src="{{details.file.url}}" class="profile-pic">
+            <h3>{{ details.fullname }}</h3>
+            <p>{{ details.email }}</p>
+        </div>
+
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">
+                    <i class="fa fa-home"></i> Home
+                </a></li>
+
+            <li><a href="{% url 'dashboard' %}">
+                    <i class="fa fa-home"></i> Dashboard
+                </a></li>
+
+            <li><a href="{% url 'coursedetails' %}">
+                    <i class="fa fa-book"></i> Courses
+                </a></li>
+
+            <li><a href="{% url 'forgot' %}">
+                    <i class="fa fa-key"></i> Change Password
+                </a></li>
+
+            <li><a href="{% url 'editprofile' %}">
+                    <i class="fa fa-user"></i> Edit Profile
+                </a></li>
+
+            <li><a href="/login?logout=true" class="logout-btn">
+                    <i class="fa fa-sign-out-alt"></i> Logout
+                </a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <!-- <h1 class="welcome">Welcome, {{ details.fullname }}</h1> -->
+
+        <div class="container">
+
+            <div class="card profile-card">
+                <img src="{{details.file.url}}" class="big-profile">
+                <h2>Welcome, {{ details.fullname }}</h2>
+                <!-- <p>{{ details.email }}</p> -->
+            </div>
+
+            <div class="card details-card">
+                <h2>Personal Information</h2>
+                <div class="row"><strong>Name:</strong> {{ details.fullname }}</div>
+                <div class="row"><strong>DOB:</strong> {{ details.dob }}</div>
+                <div class="row"><strong>Gender:</strong> {{ details.gender }}</div>
+                <div class="row"><strong>Eduaction:</strong> {{ details.qualification }}</div>
+                <div class="row"><strong>Hobbies:</strong> {{ details.hobbies }}</div>
+            </div>
+            <div class="card details-card">
+                <h2>Contact Information</h2>
+                <div class="row"><strong>Phone Number:</strong> {{ details.number }}</div>
+                <div class="row"><strong>Eamil:</strong> {{ details.email }}</div>
+            </div>
+            <div class="card details-card">
+                <h2>Guardian Information</h2>
+                <div class="row"><strong>Guardian Name:</strong> {{ details.guardian }}</div>
+                <div class="row"><strong>Guardian Occupation:</strong> {{ details.occupation }}</div>
+                <div class="row"><strong>Guardian Number:</strong> {{ details.mobile }}</div>
+            </div>
+
+
+            <div class="card details-card">
+                <h2>Course Information</h2>
+                <div class="row"><strong>Selected Course:</strong>
+                    <ul>
+                        {% for course in enrolled_courses %}
+                        <li>{{ course }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="row"><strong>Training Mode:</strong> {{ details.mode }}</div>
+                <div class="row"><strong>Prefferred Location:</strong> {{ details.loc }}</div>
+                <div class="row"><strong>Training Timing:</strong> {{ details.time }}</div>
+            </div>
+
+            <div class="card details-card">
+                <h2>Address Information</h2>
+                <div class="row"><strong>Address:</strong> {{ details.address }}</div>
+                <div class="row"><strong>Country:</strong> {{ details.country }}</div>
+                <div class="row"><strong>State:</strong> {{ details.state }}</div>
+                <div class="row"><strong>City:</strong> {{ details.city }}</div>
+                <div class="row"><strong>PIN/Zip Code:</strong> {{ details.pin }}</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
